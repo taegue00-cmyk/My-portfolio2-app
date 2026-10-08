@@ -1,0 +1,147 @@
+:root {
+  --ink: #3b2f4a;
+  --bg: #fff4ec;
+  --pink: #ff8fab;
+  --blue: #7aa7ff;
+  --yellow: #ffb703;
+  --mint: #b5ead7;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Gowun Dodum', 'Malgun Gothic', '맑은 고딕', sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 12% 18%, #ffe3ec 0, transparent 40%),
+    radial-gradient(circle at 88% 82%, #dbe8ff 0, transparent 42%),
+    var(--bg);
+  overflow-x: hidden;
+}
+
+/* ---------- 배경 멤피스 도형 ---------- */
+.memphis { position: fixed; inset: 0; pointer-events: none; z-index: 0; }
+.m { position: absolute; display: block; }
+.m-circle { width: 110px; top: 6%;  left: 4%; }
+.m-ring   { width: 90px;  top: 14%; right: 7%; }
+.m-zig    { width: 130px; top: 46%; left: 2%; }
+.m-wave   { width: 130px; bottom: 8%; right: 5%; }
+.m-tri    { width: 80px;  bottom: 12%; left: 8%; transform: rotate(14deg); }
+.m-dots   { width: 80px;  top: 60%; right: 3%; opacity: .5; }
+.m-plus   { width: 50px;  top: 5%; left: 46%; }
+.m-half   { width: 100px; bottom: 0; left: 40%; }
+
+/* ---------- 레이아웃 ---------- */
+.wrap {
+  position: relative; z-index: 1;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 56px 20px 32px;
+}
+
+.hero { text-align: center; margin-bottom: 40px; }
+.tag {
+  display: inline-block;
+  padding: 6px 16px;
+  background: var(--ink); color: #fff;
+  border-radius: 999px;
+  font-size: 13px; letter-spacing: 2px;
+}
+.hero h1 {
+  font-family: 'Jua', 'Gowun Dodum', sans-serif;
+  font-weight: 400;
+  font-size: clamp(34px, 6vw, 56px);
+  line-height: 1.25;
+  margin: 18px 0 14px;
+}
+.hl {
+  background: linear-gradient(transparent 58%, var(--yellow) 58%);
+  padding: 0 6px;
+}
+.hero p { margin: 0; font-size: 17px; line-height: 1.7; }
+
+/* ---------- 카드 ---------- */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.card {
+  display: flex; flex-direction: column;
+  text-decoration: none; color: inherit;
+  background: #fff;
+  border: 4px solid var(--ink);
+  border-radius: 24px;
+  box-shadow: 8px 8px 0 var(--ink);
+  overflow: hidden;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.card:hover, .card:focus-visible {
+  transform: translate(-4px, -4px);
+  box-shadow: 12px 12px 0 var(--ink);
+  outline: none;
+}
+.card:active {
+  transform: translate(4px, 4px);
+  box-shadow: 4px 4px 0 var(--ink);
+}
+.card:focus-visible { outline: 4px dashed var(--blue); outline-offset: 4px; }
+
+.art { padding: 14px 14px 0; border-bottom: 4px solid var(--ink); }
+.card-menu  .art { background: #e3eeff; }
+.card-stamp .art { background: #ffe3ec; }
+.art svg { display: block; width: 100%; height: auto; }
+
+.body { padding: 22px 24px 26px; display: flex; flex-direction: column; flex: 1; }
+.chip {
+  align-self: flex-start;
+  padding: 4px 12px;
+  border: 3px solid var(--ink);
+  border-radius: 999px;
+  font-size: 12px; letter-spacing: 1px;
+}
+.chip-blue { background: var(--blue); color: #fff; }
+.chip-pink { background: var(--pink); color: #fff; }
+
+.body h2 {
+  font-family: 'Jua', 'Gowun Dodum', sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  margin: 12px 0 8px;
+}
+.body p { margin: 0 0 18px; line-height: 1.7; font-size: 15px; flex: 1; }
+
+.go {
+  align-self: flex-start;
+  padding: 10px 18px;
+  background: var(--yellow);
+  border: 3px solid var(--ink);
+  border-radius: 12px;
+  font-size: 15px;
+}
+.go b { display: inline-block; transition: transform .18s ease; }
+.card:hover .go b { transform: translateX(6px); }
+
+.foot { text-align: center; margin-top: 48px; font-size: 13px; opacity: .7; }
+
+/* ---------- 등장 애니메이션 (main.js가 .show를 붙임) ---------- */
+.js .card, .js .hero { opacity: 0; transform: translateY(24px); }
+.js .card.show, .js .hero.show { opacity: 1; transform: none; }
+.js .card.show:hover { transform: translate(-4px, -4px); }
+.js .card.show:active { transform: translate(4px, 4px); }
+.js .hero, .js .card { transition: opacity .6s ease, transform .6s ease, box-shadow .18s ease; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+  .js .card, .js .hero { opacity: 1; transform: none; }
+}
+
+/* ---------- 휴대폰 ---------- */
+@media (max-width: 720px) {
+  .cards { grid-template-columns: 1fr; gap: 28px; }
+  .wrap { padding-top: 40px; }
+  .m-ring, .m-dots, .m-half { display: none; }
+}

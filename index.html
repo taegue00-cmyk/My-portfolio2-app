@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Portfolio 2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Jua&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 배경 멤피스 도형들 -->
+<div class="memphis" aria-hidden="true">
+  <svg class="m m-circle" viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="#ffd6e0"/></svg>
+  <svg class="m m-ring" viewBox="0 0 100 100"><circle cx="50" cy="50" r="38" fill="none" stroke="#7aa7ff" stroke-width="12"/></svg>
+  <svg class="m m-zig" viewBox="0 0 120 40"><polyline points="4,32 24,8 44,32 64,8 84,32 104,8" fill="none" stroke="#ff8fab" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  <svg class="m m-wave" viewBox="0 0 120 40"><path d="M4 20 Q19 0 34 20 T64 20 T94 20 T124 20" fill="none" stroke="#ffb703" stroke-width="7" stroke-linecap="round"/></svg>
+  <svg class="m m-tri" viewBox="0 0 100 100"><polygon points="50,8 94,88 6,88" fill="#b5ead7"/></svg>
+  <svg class="m m-dots" viewBox="0 0 80 80"><g fill="#3b2f4a"><circle cx="10" cy="10" r="4"/><circle cx="30" cy="10" r="4"/><circle cx="50" cy="10" r="4"/><circle cx="70" cy="10" r="4"/><circle cx="10" cy="30" r="4"/><circle cx="30" cy="30" r="4"/><circle cx="50" cy="30" r="4"/><circle cx="70" cy="30" r="4"/><circle cx="10" cy="50" r="4"/><circle cx="30" cy="50" r="4"/><circle cx="50" cy="50" r="4"/><circle cx="70" cy="50" r="4"/></g></svg>
+  <svg class="m m-plus" viewBox="0 0 100 100"><path d="M50 10v80M10 50h80" stroke="#7aa7ff" stroke-width="14" stroke-linecap="round"/></svg>
+  <svg class="m m-half" viewBox="0 0 100 50"><path d="M0 50a50 50 0 0 1 100 0z" fill="#ffe08a"/></svg>
+</div>
+
+<main class="wrap">
+  <header class="hero">
+    <span class="tag">PORTFOLIO 02</span>
+    <h1>우리 가게를 위한<br><span class="hl">작은 도구</span> 모음</h1>
+    <p>자영업 사장님이 바로 쓸 수 있게 만든 두 가지 프로젝트예요.<br>카드를 눌러 구경해 보세요.</p>
+  </header>
+
+  <section class="cards" aria-label="프로젝트 목록">
+
+    <!-- 카드 1: 메뉴판 -->
+    <a class="card card-menu" href="../메뉴판/index.html" aria-label="메뉴판 프로젝트로 이동">
+      <div class="art">
+        <svg viewBox="0 0 240 170" role="img" aria-hidden="true">
+          <circle cx="40" cy="40" r="22" fill="#ffd6e0"/>
+          <circle cx="205" cy="135" r="18" fill="#ffe08a"/>
+          <polyline points="170,24 184,10 198,24 212,10" fill="none" stroke="#ff8fab" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- 메뉴판 본체 -->
+          <rect x="68" y="18" width="104" height="138" rx="10" fill="#fff" stroke="#3b2f4a" stroke-width="4"/>
+          <rect x="68" y="18" width="104" height="26" rx="10" fill="#7aa7ff" stroke="#3b2f4a" stroke-width="4"/>
+          <rect x="68" y="34" width="104" height="10" fill="#7aa7ff"/>
+          <line x1="68" y1="44" x2="172" y2="44" stroke="#3b2f4a" stroke-width="4"/>
+          <text x="120" y="38" text-anchor="middle" font-family="Jua, sans-serif" font-size="14" fill="#fff">MENU</text>
+          <g stroke="#3b2f4a" stroke-width="4" stroke-linecap="round">
+            <line x1="82" y1="68" x2="118" y2="68"/><line x1="140" y1="68" x2="158" y2="68" stroke="#ff8fab"/>
+            <line x1="82" y1="90" x2="124" y2="90"/><line x1="140" y1="90" x2="158" y2="90" stroke="#ff8fab"/>
+            <line x1="82" y1="112" x2="112" y2="112"/><line x1="140" y1="112" x2="158" y2="112" stroke="#ff8fab"/>
+            <line x1="82" y1="134" x2="120" y2="134"/><line x1="140" y1="134" x2="158" y2="134" stroke="#ff8fab"/>
+          </g>
+          <!-- 커피잔 -->
+          <g transform="translate(166 100)">
+            <path d="M0 14h40v22a14 14 0 0 1-14 14h-12a14 14 0 0 1-14-14z" fill="#ffb703" stroke="#3b2f4a" stroke-width="4" stroke-linejoin="round"/>
+            <path d="M40 20h6a8 8 0 0 1 0 16h-6" fill="none" stroke="#3b2f4a" stroke-width="4"/>
+            <path d="M12 6q4-6 0-10M24 6q4-6 0-10" fill="none" stroke="#3b2f4a" stroke-width="3" stroke-linecap="round"/>
+          </g>
+        </svg>
+      </div>
+      <div class="body">
+        <span class="chip chip-blue">PROJECT 01</span>
+        <h2>메뉴판</h2>
+        <p>가게 이름과 메뉴, 가격만 고치면 바로 완성되는 모바일 메뉴판. QR로 손님에게 보여줄 수 있어요.</p>
+        <span class="go">구경하러 가기 <b>→</b></span>
+      </div>
+    </a>
+
+    <!-- 카드 2: 단골 적립 스탬프 -->
+    <a class="card card-stamp" href="../단골%20적립%20스탬프/index.html" aria-label="단골 적립 스탬프 프로젝트로 이동">
+      <div class="art">
+        <svg viewBox="0 0 240 170" role="img" aria-hidden="true">
+          <circle cx="205" cy="36" r="22" fill="#b5ead7"/>
+          <circle cx="34" cy="138" r="16" fill="#ffd6e0"/>
+          <path d="M20 22q10-12 20 0t20 0t20 0" fill="none" stroke="#7aa7ff" stroke-width="5" stroke-linecap="round"/>
+          <!-- 스탬프 카드 -->
+          <g transform="rotate(-6 120 88)">
+            <rect x="40" y="30" width="160" height="108" rx="12" fill="#fff" stroke="#3b2f4a" stroke-width="4"/>
+            <rect x="40" y="30" width="160" height="26" rx="12" fill="#ff8fab" stroke="#3b2f4a" stroke-width="4"/>
+            <rect x="40" y="44" width="160" height="12" fill="#ff8fab"/>
+            <line x1="40" y1="56" x2="200" y2="56" stroke="#3b2f4a" stroke-width="4"/>
+            <text x="120" y="50" text-anchor="middle" font-family="Jua, sans-serif" font-size="14" fill="#fff">STAMP CARD</text>
+            <g stroke="#3b2f4a" stroke-width="3">
+              <circle cx="68" cy="82" r="13" fill="#ffe08a"/><circle cx="104" cy="82" r="13" fill="#ffe08a"/><circle cx="140" cy="82" r="13" fill="#ffe08a"/><circle cx="176" cy="82" r="13" fill="#fff" stroke-dasharray="4 4"/>
+              <circle cx="68" cy="116" r="13" fill="#ffe08a"/><circle cx="104" cy="116" r="13" fill="#fff" stroke-dasharray="4 4"/><circle cx="140" cy="116" r="13" fill="#fff" stroke-dasharray="4 4"/><circle cx="176" cy="116" r="13" fill="#fff" stroke-dasharray="4 4"/>
+            </g>
+            <g fill="#3b2f4a">
+              <path d="M68 76l2.5 5 5.5.8-4 3.9 1 5.5-5-2.6-5 2.6 1-5.5-4-3.9 5.5-.8z"/>
+              <path d="M104 76l2.5 5 5.5.8-4 3.9 1 5.5-5-2.6-5 2.6 1-5.5-4-3.9 5.5-.8z"/>
+              <path d="M140 76l2.5 5 5.5.8-4 3.9 1 5.5-5-2.6-5 2.6 1-5.5-4-3.9 5.5-.8z"/>
+              <path d="M68 110l2.5 5 5.5.8-4 3.9 1 5.5-5-2.6-5 2.6 1-5.5-4-3.9 5.5-.8z"/>
+            </g>
+          </g>
+          <!-- 도장 -->
+          <g transform="translate(176 96)">
+            <rect x="-8" y="0" width="16" height="22" rx="4" fill="#7aa7ff" stroke="#3b2f4a" stroke-width="4"/>
+            <rect x="-18" y="22" width="36" height="12" rx="4" fill="#ffb703" stroke="#3b2f4a" stroke-width="4"/>
+            <rect x="-13" y="-8" width="26" height="10" rx="5" fill="#ff8fab" stroke="#3b2f4a" stroke-width="4"/>
+          </g>
+        </svg>
+      </div>
+      <div class="body">
+        <span class="chip chip-pink">PROJECT 02</span>
+        <h2>단골 적립 스탬프</h2>
+        <p>종이 쿠폰 대신 휴대폰으로 도장을 모으는 적립 카드. 손님 화면과 사장님 관리 화면이 있어요.</p>
+        <span class="go">구경하러 가기 <b>→</b></span>
+      </div>
+    </a>
+
+  </section>
+
+  <footer class="foot">© 2026 My Portfolio 2</footer>
+</main>
+
+<script src="main.js"></script>
+</body>
+</html>
